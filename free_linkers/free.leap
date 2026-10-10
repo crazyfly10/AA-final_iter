@@ -1,0 +1,19 @@
+source leaprc.protein.ff19SB
+source leaprc.gaff2
+source leaprc.water.opc
+loadAmberPrep CYL.prepin
+loadAmberParams frcmod.CYL
+loadAmberParams frcmod.ff19SB_CYL
+
+fib = loadPdb fib_noh.pdb
+lnk = loadPdb linkers_noh.pdb
+sys = combine {fib lnk}
+check sys
+charge sys
+solvateBox sys OPCBOX 12.0
+# 2nd pass: uncomment both lines and fill in the numbers
+addIonsRand sys Cl- 0
+addIonsRand sys Na+ 355 Cl- 355
+charge sys
+saveAmberParm sys free.prmtop free.inpcrd
+quit

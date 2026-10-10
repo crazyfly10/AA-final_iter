@@ -1,0 +1,37 @@
+title                   = HET-s 12-mer NVT equilibration
+define                  = -DPOSRES
+
+integrator              = md
+dt                      = 0.002
+nsteps                  = 50000          ; 100 ps
+
+continuation            = no
+constraint_algorithm    = lincs
+constraints             = h-bonds
+lincs_iter              = 1
+lincs_order             = 4
+
+cutoff-scheme           = Verlet
+nstlist                 = 20
+rlist                   = 1.0
+coulombtype             = PME
+rcoulomb                = 1.0
+vdwtype                 = Cut-off
+rvdw                    = 1.0
+DispCorr                = EnerPres
+
+tcoupl                  = V-rescale
+tc-grps                 = Prot_cyl Water_and_ions
+tau_t                   = 0.1 0.1
+ref_t                   = 298 298
+
+pcoupl                  = no
+pbc                     = xyz
+
+gen_vel                 = yes
+gen_temp                = 298
+gen_seed                = -1
+
+nstxout-compressed      = 5000
+nstenergy               = 1000
+nstlog                  = 1000
