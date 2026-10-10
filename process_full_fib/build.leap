@@ -1,0 +1,19 @@
+# Step 14: linked fibril -- ff19SB protein, GAFF2 linker, OPC water (same as the ACE-CYL-NME test)
+source leaprc.protein.ff19SB
+source leaprc.gaff2
+source leaprc.water.opc
+loadAmberPrep CYL.prepin
+loadAmberParams frcmod.CYL
+loadAmberParams frcmod.ff19SB_CYL      # CYL's CMAP: without it CYL has no backbone torsion term
+
+fib = loadPdb full_fib_noh.pdb
+check fib
+charge fib
+savePdb fib fib_check.pdb
+
+# solvent and ions here, so acpype converts them (4-site OPC, OPC ion parameters)
+solvateBox fib OPCBOX 12.0             # rectangular; solvateOct also works but then needs the .gro box fix
+addIonsRand fib Cl- 0                  # neutralise -- use Na+ 0 instead if 'charge fib' is negative
+addIonsRand fib Na+ 115 Cl- 115          # optional extra salt: N pairs, same concentration as your capped run
+saveAmberParm fib linked.prmtop linked.inpcrd
+quit

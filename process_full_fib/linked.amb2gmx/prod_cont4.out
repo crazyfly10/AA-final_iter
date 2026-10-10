@@ -1,0 +1,47 @@
+nohup: ignoring input
+                :-) GROMACS - gmx mdrun, 2026.3-conda_forge (-:
+
+Executable:   /root/miniconda3/envs/GROMACS-IGEM/bin.AVX2_256/gmx_mpi
+Data prefix:  /root/miniconda3/envs/GROMACS-IGEM
+Working dir:  /root/bonded_inter_cap_#2/process_full_fib/linked.amb2gmx
+Command line:
+  gmx_mpi mdrun -s prod.tpr -deffnm prod -cpi prod.cpt -nb gpu -pme gpu
+
+Compiled SIMD is AVX2_256, but AVX_512 might be faster (see log).
+The current CPU can measure timings more accurately than the code in
+gmx mdrun was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding gmx mdrun with the GMX_USE_RDTSCP=ON CMake option.
+Reading file prod.tpr, VERSION 2026.3-conda_forge (single precision)
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+GPU-aware MPI was not detected, will not use direct GPU communication. Check the GROMACS install guide for recommendations for GPU-aware support. If you are certain about GPU-aware support in your MPI library, you can force its use by setting the GMX_FORCE_GPU_AWARE_MPI environment variable.
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do non-perturbed short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the CPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI process
+Using 23 OpenMP threads 
+
+
+NOTE: OS CPU limit is lower than logical cpu count, thread pinning disabled.
+Setting the maximum number of constraint warnings to 2147483647
+starting mdrun 'linked'
+50000000 steps, 200000.0 ps (continuing from step 11821520,  47286.1 ps).
+
+Writing final coordinates.
+
+NOTE: 11 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:   687044.645    29871.512     2300.0
+                         8h17:51
+                 (ns/day)    (hour/ns)    (ms/step)  (Matom*steps/s) 
+Performance:      441.708        0.054        0.782          233.590 
+
+GROMACS reminds you: "If You Want Something Done You Have to Do It Yourself" (Highlander II)
+

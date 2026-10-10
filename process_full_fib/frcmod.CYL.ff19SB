@@ -1,0 +1,196 @@
+Remark line goes here
+MASS
+c5 12.010        0.000               ATTN, no polarizability parameter
+c  12.010        0.000               ATTN, no polarizability parameter
+o  16.000        0.000               ATTN, no polarizability parameter
+n  14.010        0.000               ATTN, no polarizability parameter
+c3 12.010        0.000               ATTN, no polarizability parameter
+ns 14.010        0.000               ATTN, no polarizability parameter
+os 16.000        0.000               ATTN, no polarizability parameter
+ss 32.060        0.000               ATTN, no polarizability parameter
+h1 1.008         0.000               ATTN, no polarizability parameter
+hc 1.008         0.000               ATTN, no polarizability parameter
+hn 1.008         0.000               ATTN, no polarizability parameter
+
+BOND
+S -c5    0.00   0.000       ATTN, need revision
+c5-c5    0.00   0.000       ATTN, need revision
+c -c5    0.00   0.000       ATTN, need revision
+c5-h1    0.00   0.000       ATTN, need revision
+c5-hc    0.00   0.000       ATTN, need revision
+c -o     0.00   0.000       ATTN, need revision
+c -n     0.00   0.000       ATTN, need revision
+c3-n     0.00   0.000       ATTN, need revision
+c3-c3    0.00   0.000       ATTN, need revision
+c3-h1    0.00   0.000       ATTN, need revision
+c -c3    0.00   0.000       ATTN, need revision
+c3-hc    0.00   0.000       ATTN, need revision
+c -ns    0.00   0.000       ATTN, need revision
+c3-ns    0.00   0.000       ATTN, need revision
+hn-ns    0.00   0.000       ATTN, need revision
+c3-os    0.00   0.000       ATTN, need revision
+c3-c5    0.00   0.000       ATTN, need revision
+c5-ss    0.00   0.000       ATTN, need revision
+c5-ns    0.00   0.000       ATTN, need revision
+
+ANGLE
+2C-S -c5    0.000       0.000   ATTN, need revision
+S -c5-c5    0.000       0.000   ATTN, need revision
+S -c5-c     0.000       0.000   ATTN, need revision
+S -c5-h1    0.000       0.000   ATTN, need revision
+c -c5-c5    0.000       0.000   ATTN, need revision
+c5-c5-hc    0.000       0.000   ATTN, need revision
+c5-c -n     0.000       0.000   ATTN, need revision
+c5-c -o     0.000       0.000   ATTN, need revision
+c5-c5-h1    0.000       0.000   ATTN, need revision
+c -c5-hc    0.000       0.000   ATTN, need revision
+c -n -c3    0.000       0.000   ATTN, need revision
+c -n -c     0.000       0.000   ATTN, need revision
+n -c -o     0.000       0.000   ATTN, need revision
+c3-c3-n     0.000       0.000   ATTN, need revision
+h1-c3-n     0.000       0.000   ATTN, need revision
+c -c3-c3    0.000       0.000   ATTN, need revision
+c3-c3-hc    0.000       0.000   ATTN, need revision
+c3-c3-h1    0.000       0.000   ATTN, need revision
+c3-c -o     0.000       0.000   ATTN, need revision
+c3-c -ns    0.000       0.000   ATTN, need revision
+c -c3-hc    0.000       0.000   ATTN, need revision
+c -ns-c3    0.000       0.000   ATTN, need revision
+c -ns-hn    0.000       0.000   ATTN, need revision
+ns-c -o     0.000       0.000   ATTN, need revision
+c3-c3-ns    0.000       0.000   ATTN, need revision
+h1-c3-ns    0.000       0.000   ATTN, need revision
+c3-ns-hn    0.000       0.000   ATTN, need revision
+c3-c3-os    0.000       0.000   ATTN, need revision
+c3-os-c3    0.000       0.000   ATTN, need revision
+h1-c3-os    0.000       0.000   ATTN, need revision
+c3-c3-c3    0.000       0.000   ATTN, need revision
+c3-c3-c5    0.000       0.000   ATTN, need revision
+c3-c5-ss    0.000       0.000   ATTN, need revision
+c3-c5-c5    0.000       0.000   ATTN, need revision
+c3-c5-h1    0.000       0.000   ATTN, need revision
+c5-c3-hc    0.000       0.000   ATTN, need revision
+c5-ss-c5    0.000       0.000   ATTN, need revision
+c5-c5-c5    0.000       0.000   ATTN, need revision
+c5-c5-ns    0.000       0.000   ATTN, need revision
+c5-c5-ss    0.000       0.000   ATTN, need revision
+h1-c5-ss    0.000       0.000   ATTN, need revision
+c -ns-c5    0.000       0.000   ATTN, need revision
+c5-ns-hn    0.000       0.000   ATTN, need revision
+h1-c5-ns    0.000       0.000   ATTN, need revision
+ns-c -ns    0.000       0.000   ATTN, need revision
+c -c5-h1    0.000       0.000   ATTN, need revision
+hc-c5-hc    0.000       0.000   ATTN, need revision
+h1-c3-h1    0.000       0.000   ATTN, need revision
+hc-c3-hc    0.000       0.000   ATTN, need revision
+h1-c5-h1    0.000       0.000   ATTN, need revision
+
+DIHE
+2C-S -c5-c5   1    0.000         0.000           2.000      ATTN, need revision
+2C-S -c5-c    1    0.000         0.000           2.000      ATTN, need revision
+2C-S -c5-h1   1    0.000         0.000           2.000      ATTN, need revision
+S -c5-c5-c    1    0.000         0.000           2.000      ATTN, need revision
+S -c5-c5-hc   1    0.000         0.000           2.000      ATTN, need revision
+n -c -c5-S    1    0.000         0.000           2.000      ATTN, need revision
+o -c -c5-S    1    0.000         0.000           2.000      ATTN, need revision
+o -c -c5-c5   1    0.000         0.000           2.000      ATTN, need revision
+n -c -c5-c5   1    0.000         0.000           2.000      ATTN, need revision
+c5-c -n -c3   1    0.000         0.000           2.000      ATTN, need revision
+c5-c -n -c    1    0.000         0.000           2.000      ATTN, need revision
+c3-c3-n -c    1    0.000         0.000           2.000      ATTN, need revision
+h1-c3-n -c    1    0.000         0.000           2.000      ATTN, need revision
+o -c -n -c    1    0.000         0.000           2.000      ATTN, need revision
+o -c -n -c3   1    0.000         0.000           2.000      ATTN, need revision
+c -c3-c3-n    1    0.000         0.000           2.000      ATTN, need revision
+hc-c3-c3-n    1    0.000         0.000           2.000      ATTN, need revision
+o -c -c3-c3   1    0.000         0.000           2.000      ATTN, need revision
+ns-c -c3-c3   1    0.000         0.000           2.000      ATTN, need revision
+c3-c -ns-c3   1    0.000         0.000           2.000      ATTN, need revision
+c3-c -ns-hn   1    0.000         0.000           2.000      ATTN, need revision
+c3-c3-ns-c    1    0.000         0.000           2.000      ATTN, need revision
+h1-c3-ns-c    1    0.000         0.000           2.000      ATTN, need revision
+o -c -ns-c3   1    0.000         0.000           2.000      ATTN, need revision
+o -c -ns-hn   1    0.000         0.000           2.000      ATTN, need revision
+ns-c3-c3-os   1    0.000         0.000           2.000      ATTN, need revision
+h1-c3-c3-ns   1    0.000         0.000           2.000      ATTN, need revision
+c3-c3-os-c3   1    0.000         0.000           2.000      ATTN, need revision
+h1-c3-os-c3   1    0.000         0.000           2.000      ATTN, need revision
+os-c3-c3-os   1    0.000         0.000           2.000      ATTN, need revision
+h1-c3-c3-os   1    0.000         0.000           2.000      ATTN, need revision
+c3-c3-ns-hn   1    0.000         0.000           2.000      ATTN, need revision
+ns-c -c3-hc   1    0.000         0.000           2.000      ATTN, need revision
+c -c3-c3-c3   1    0.000         0.000           2.000      ATTN, need revision
+c -c3-c3-hc   1    0.000         0.000           2.000      ATTN, need revision
+o -c -c3-hc   1    0.000         0.000           2.000      ATTN, need revision
+c3-c3-c3-c3   1    0.000         0.000           2.000      ATTN, need revision
+c3-c3-c3-hc   1    0.000         0.000           2.000      ATTN, need revision
+c3-c3-c3-c5   1    0.000         0.000           2.000      ATTN, need revision
+c3-c3-c5-ss   1    0.000         0.000           2.000      ATTN, need revision
+c3-c3-c5-c5   1    0.000         0.000           2.000      ATTN, need revision
+c3-c3-c5-h1   1    0.000         0.000           2.000      ATTN, need revision
+c3-c5-ss-c5   1    0.000         0.000           2.000      ATTN, need revision
+c3-c5-c5-c5   1    0.000         0.000           2.000      ATTN, need revision
+c3-c5-c5-ns   1    0.000         0.000           2.000      ATTN, need revision
+c3-c5-c5-h1   1    0.000         0.000           2.000      ATTN, need revision
+c5-c5-ss-c5   1    0.000         0.000           2.000      ATTN, need revision
+h1-c5-ss-c5   1    0.000         0.000           2.000      ATTN, need revision
+c5-c5-c5-ss   1    0.000         0.000           2.000      ATTN, need revision
+ns-c5-c5-ss   1    0.000         0.000           2.000      ATTN, need revision
+h1-c5-c5-ss   1    0.000         0.000           2.000      ATTN, need revision
+c5-c5-ns-c    1    0.000         0.000           2.000      ATTN, need revision
+c5-c5-ns-hn   1    0.000         0.000           2.000      ATTN, need revision
+c5-c5-c5-c5   1    0.000         0.000           2.000      ATTN, need revision
+c5-c5-c5-ns   1    0.000         0.000           2.000      ATTN, need revision
+c5-c5-c5-h1   1    0.000         0.000           2.000      ATTN, need revision
+o -c -ns-c5   1    0.000         0.000           2.000      ATTN, need revision
+ns-c -ns-c5   1    0.000         0.000           2.000      ATTN, need revision
+ns-c5-c5-ns   1    0.000         0.000           2.000      ATTN, need revision
+h1-c5-c5-ns   1    0.000         0.000           2.000      ATTN, need revision
+ns-c -ns-hn   1    0.000         0.000           2.000      ATTN, need revision
+h1-c5-ns-c    1    0.000         0.000           2.000      ATTN, need revision
+c -c5-c5-c    1    0.000         0.000           2.000      ATTN, need revision
+c -c5-c5-hc   1    0.000         0.000           2.000      ATTN, need revision
+c -c5-c5-h1   1    0.000         0.000           2.000      ATTN, need revision
+h1-c5-c5-hc   1    0.000         0.000           2.000      ATTN, need revision
+n -c -c5-h1   1    0.000         0.000           2.000      ATTN, need revision
+o -c -c5-h1   1    0.000         0.000           2.000      ATTN, need revision
+o -c -c5-hc   1    0.000         0.000           2.000      ATTN, need revision
+n -c -c5-hc   1    0.000         0.000           2.000      ATTN, need revision
+c -c3-c3-h1   1    0.000         0.000           2.000      ATTN, need revision
+h1-c3-c3-hc   1    0.000         0.000           2.000      ATTN, need revision
+h1-c3-ns-hn   1    0.000         0.000           2.000      ATTN, need revision
+h1-c3-c3-h1   1    0.000         0.000           2.000      ATTN, need revision
+hc-c3-c3-hc   1    0.000         0.000           2.000      ATTN, need revision
+c5-c3-c3-hc   1    0.000         0.000           2.000      ATTN, need revision
+hc-c3-c5-ss   1    0.000         0.000           2.000      ATTN, need revision
+hc-c3-c5-c5   1    0.000         0.000           2.000      ATTN, need revision
+hc-c3-c5-h1   1    0.000         0.000           2.000      ATTN, need revision
+h1-c5-c5-h1   1    0.000         0.000           2.000      ATTN, need revision
+h1-c5-ns-hn   1    0.000         0.000           2.000      ATTN, need revision
+
+IMPROPER
+CT-N -C -O         10.5          180.0         2.0          Using general improper torsional angle  X- X- C- O, penalty score=  6.0)
+C -H -N -XC         1.0          180.0         2.0          Same as X -X -N -H , penalty score=  6.0 (use general term))
+c5-n -c -o          1.1          180.0         2.0          Using the default value
+c -c -n -c3         1.1          180.0         2.0          Using the default value
+c3-ns-c -o          1.1          180.0         2.0          Using the default value
+c -c3-ns-hn         1.1          180.0         2.0          Using the default value
+c -c5-ns-hn         1.1          180.0         2.0          Using the default value
+ns-ns-c -o          1.1          180.0         2.0          Using the default value
+N -O -C -XC         1.1          180.0         2.0          Using the default value
+
+NONBON
+  c5          0.0000  0.0000             ATTN, need revision
+  c           0.0000  0.0000             ATTN, need revision
+  o           0.0000  0.0000             ATTN, need revision
+  n           0.0000  0.0000             ATTN, need revision
+  c3          0.0000  0.0000             ATTN, need revision
+  ns          0.0000  0.0000             ATTN, need revision
+  os          0.0000  0.0000             ATTN, need revision
+  ss          0.0000  0.0000             ATTN, need revision
+  h1          0.0000  0.0000             ATTN, need revision
+  hc          0.0000  0.0000             ATTN, need revision
+  hn          0.0000  0.0000             ATTN, need revision
+
+
+
