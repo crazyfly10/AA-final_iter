@@ -1,0 +1,42 @@
+nohup: ignoring input
+                :-) GROMACS - gmx mdrun, 2026.3-conda_forge (-:
+
+Executable:   /root/miniconda3/envs/GROMACS-IGEM/bin.AVX2_256/gmx_mpi
+Data prefix:  /root/miniconda3/envs/GROMACS-IGEM
+Working dir:  /root/bonded_inter_cap_#2/process_capped_fib_OPC
+Command line:
+  gmx_mpi mdrun -deffnm prod -nb gpu -pme gpu
+
+
+Back Off! I just backed up prod.log to ./#prod.log.1#
+Compiled SIMD is AVX2_256, but AVX_512 might be faster (see log).
+The current CPU can measure timings more accurately than the code in
+gmx mdrun was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding gmx mdrun with the GMX_USE_RDTSCP=ON CMake option.
+Reading file prod.tpr, VERSION 2026.3-conda_forge (single precision)
+
+GPU-aware MPI was not detected, will not use direct GPU communication. Check the GROMACS install guide for recommendations for GPU-aware support. If you are certain about GPU-aware support in your MPI library, you can force its use by setting the GMX_FORCE_GPU_AWARE_MPI environment variable.
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do non-perturbed short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the CPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI process
+Using 23 OpenMP threads 
+
+
+NOTE: OS CPU limit is lower than logical cpu count, thread pinning disabled.
+Setting the maximum number of constraint warnings to 2147483647
+
+Back Off! I just backed up prod.xtc to ./#prod.xtc.1#
+
+Back Off! I just backed up prod.edr to ./#prod.edr.1#
+starting mdrun 'Protein in water'
+50000000 steps, 200000.0 ps.
+
+step 5620352: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates

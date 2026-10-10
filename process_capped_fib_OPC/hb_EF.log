@@ -1,0 +1,30 @@
+                :-) GROMACS - gmx hbond, 2026.3-conda_forge (-:
+
+Executable:   /root/miniconda3/envs/GROMACS-IGEM/bin.AVX2_256/gmx_mpi
+Data prefix:  /root/miniconda3/envs/GROMACS-IGEM
+Working dir:  /root/bonded_inter_cap_#2/process_capped_fib_OPC
+Command line:
+  gmx_mpi hbond -s prot.tpr -f nojump_prot.xtc -n hb.ndx -r 'group "chain_E"' -t 'group "F_rungs"' -num hb_EF.xvg
+
+Reading file prot.tpr, VERSION 2026.3-conda_forge (single precision)
+Reading file prot.tpr, VERSION 2026.3-conda_forge (single precision)
+
+Back Off! I just backed up hbond.ndx to ./#hbond.ndx.6#
+Reading frame       0 time    0.000   Reading frame       1 time   50.000   Reading frame       2 time  100.000   Reading frame       3 time  150.000   Reading frame       4 time  200.000   Reading frame       5 time  250.000   Reading frame       6 time  300.000   Reading frame       7 time  350.000   Reading frame       8 time  400.000   Reading frame       9 time  450.000   Reading frame      10 time  500.000   Reading frame      11 time  550.000   Reading frame      12 time  600.000   Reading frame      13 time  650.000   Reading frame      14 time  700.000   Reading frame      15 time  750.000   Reading frame      16 time  800.000   Reading frame      17 time  850.000   Reading frame      18 time  900.000   Reading frame      19 time  950.000   Reading frame      20 time 1000.000   Reading frame      30 time 1500.000   Reading frame      40 time 2000.000   Reading frame      50 time 2500.000   Reading frame      60 time 3000.000   Reading frame      70 time 3500.000   Reading frame      80 time 4000.000   Reading frame      90 time 4500.000   Reading frame     100 time 5000.000   Reading frame     110 time 5500.000   Reading frame     120 time 6000.000   Reading frame     130 time 6500.000   Reading frame     140 time 7000.000   Reading frame     150 time 7500.000   Reading frame     160 time 8000.000   Reading frame     170 time 8500.000   Reading frame     180 time 9000.000   Reading frame     190 time 9500.000   Reading frame     200 time 10000.000   Reading frame     300 time 15000.000   Reading frame     400 time 20000.000   Reading frame     500 time 25000.000   Reading frame     600 time 30000.000   Reading frame     700 time 35000.000   Reading frame     800 time 40000.000   Reading frame     900 time 45000.000   Reading frame    1000 time 50000.000   Reading frame    1100 time 55000.000   Reading frame    1200 time 60000.000   Reading frame    1300 time 65000.000   Reading frame    1400 time 70000.000   Reading frame    1500 time 75000.000   
+Analyzed 1518 frames, last time 75850.000
+
+Checking for overlap in atoms between chain_E (1099 atoms) and F_rungs (982 atoms)
+Selection 'chain_E' has 214 acceptors and 114 donors.
+Selection 'F_rungs' has 197 acceptors and 106 donors.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Gorelov, A. Titov, O. Tolicheva, A. Konevega, A. Shvetsov
+Determination of Hydrogen Bonds in GROMACS: A New Implementation to Overcome
+Memory Limitation
+Journal of Chemical Information and Modeling (2024)
+https://doi.org/10.1021/acs.jcim.3c02087
+-------- -------- --- Thank You --- -------- --------
+
+
+GROMACS reminds you: "But in my opinion, all things in nature occur mathematically." (Rene Decartes)
+

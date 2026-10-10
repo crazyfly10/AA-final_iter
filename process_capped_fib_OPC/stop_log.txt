@@ -1,0 +1,1 @@
+   75.7 ns  FAIL  fails=4  min_image=1.15 nm  | cap junction  (K-L):  10.89 +/- 0.16 A | other free end (A-B):  9.65 +/- 0.09 A

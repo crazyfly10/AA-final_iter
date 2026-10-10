@@ -1,0 +1,104 @@
+==========================================================================
+| ACPYPE: AnteChamber PYthon Parser interfacE v. 2026.9.4 (c) 2026 AWSdS |
+==========================================================================
+DEBUG: CLI: -p test.prmtop -x test.inpcrd -b ace_cyl_nme
+DEBUG: Python Version 3.12.13 | packaged by conda-forge | (main, Mar 5 2026, 16:50:00) [GCC 14.3.0]
+Converting Amber input files to Gromacs ...
+DEBUG: prmtop and inpcrd files loaded
+DEBUG: basename defined = 'ace_cyl_nme'
+DEBUG: GMX does not like atomtype starting with Digit
+DEBUG: prefixing AtomType ['2C'] with 'A'.
+DEBUG: getCoords done
+DEBUG: getABCOEFs done
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Na+' HAS to be all UPPERCASE... Applying this here.
+DEBUG: atom name 'Cl-' HAS to be all UPPERCASE... Applying this here.
+DEBUG: charge to be balanced: total 0.0000611660
+DEBUG: balanceCharges done
+DEBUG: Balanced TotalCharge 0.0000000000
+DEBUG: PBC = [[78.3580424, 78.3580424, 78.3580424], [109.471219, 109.471219, 109.471219]]
+DEBUG: getAtoms done
+DEBUG: getBonds done
+DEBUG: getAngles done
+DEBUG: getDihedrals done
+DEBUG: 1 CMAP terms over 1 grids
+==> Writing GROMACS files
+
+==> Disambiguating lower and uppercase atomtypes in GMX top file, even if identical.
+
+DEBUG: writing GRO file
+DEBUG: PBC octahedron
+DEBUG: writing POSRE file
+DEBUG: atomTypes 26
+DEBUG: GMX atomtypes done
+DEBUG: type of water 'four-'
+DEBUG: atoms 44796
+DEBUG: GMX atoms done
+DEBUG: bonds 44746
+DEBUG: GMX bonds done
+DEBUG: atomPairs 386
+DEBUG: GMX pairs done
+DEBUG: angles 308
+DEBUG: GMX angles done
+DEBUG: setProperDihedralsCoef done
+DEBUG: properDihedralsCoefRB 401
+DEBUG: properDihedralsAlphaGamma 0
+DEBUG: properDihedralsGmx45 587
+==> Writing GMX dihedrals for GMX 4.5 and higher.
+
+DEBUG: GMX special proper dihedrals done
+DEBUG: improperDihedrals 14
+DEBUG: GMX improper dihedrals done
+DEBUG: GMX cmap done
+DEBUG: prmtop and inpcrd files parsed
+Total time of execution: less than a second
+DEBUG: No tmp folder left to be removed

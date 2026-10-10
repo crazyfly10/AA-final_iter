@@ -1,0 +1,14 @@
+source leaprc.protein.ff19SB
+source leaprc.gaff2
+source leaprc.water.opc
+loadAmberPrep CYL.prepin
+loadAmberParams frcmod.CYL
+loadAmberParams frcmod.ff19SB_CYL
+m = sequence { ACE CYL NME }
+check m
+charge m
+solvateOct m OPCBOX 12.0
+addIonsRand m Na+ 26 Cl- 26
+saveAmberParm m test.prmtop test.inpcrd
+savePdb m test.pdb
+quit

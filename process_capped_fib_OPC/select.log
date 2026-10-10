@@ -1,0 +1,19 @@
+                :-) GROMACS - gmx select, 2026.3-conda_forge (-:
+
+Executable:   /root/miniconda3/envs/GROMACS-IGEM/bin.AVX2_256/gmx_mpi
+Data prefix:  /root/miniconda3/envs/GROMACS-IGEM
+Working dir:  /root/bonded_inter_cap_#2/process_capped_fib_OPC
+Command line:
+  gmx_mpi select -s prot.tpr -on hb.ndx -select '
+  "chain_B" resindex 74 to 146;   "A_rungs" resindex 8 to 73;
+  "chain_E" resindex 293 to 365;  "F_rungs" resindex 373 to 438;
+  "chain_F" resindex 366 to 438;  "G_rungs" resindex 446 to 511;
+  "chain_H" resindex 512 to 584;  "I_rungs" resindex 592 to 657;
+  "chain_K" resindex 731 to 803;  "L_rungs" resindex 804 to 869'
+
+Reading file prot.tpr, VERSION 2026.3-conda_forge (single precision)
+Reading file prot.tpr, VERSION 2026.3-conda_forge (single precision)
+Analyzed topology coordinates
+
+GROMACS reminds you: "As always in life, people want a simple answer... and it's always wrong." (Marie Daly)
+

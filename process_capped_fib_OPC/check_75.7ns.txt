@@ -1,0 +1,109 @@
+/root/miniconda3/envs/GROMACS-IGEM/lib/python3.12/site-packages/MDAnalysis/coordinates/XDR.py:261: UserWarning: Reload offsets from trajectory
+ ctime or size or n_atoms did not match
+  warnings.warn(
+1518 frames, 13832 atoms, 926 residues
+
+chains: 12 blocks
+  chain A: resid 1-73  (73 residues)  NMET1 ... CASN73
+  chain B: resid 74-146  (73 residues)  NMET74 ... CASN146
+  chain C: resid 147-219  (73 residues)  NMET147 ... CASN219
+  chain D: resid 220-292  (73 residues)  NMET220 ... CASN292
+  chain E: resid 293-365  (73 residues)  NMET293 ... CASN365
+  chain F: resid 366-438  (73 residues)  NMET366 ... CASN438
+  chain G: resid 439-511  (73 residues)  NMET439 ... CASN511
+  chain H: resid 512-584  (73 residues)  NMET512 ... CASN584
+  chain I: resid 585-657  (73 residues)  NMET585 ... CASN657
+  chain J: resid 658-730  (73 residues)  NMET658 ... CASN730
+  chain K: resid 731-803  (73 residues)  NMET731 ... CASN803
+  chain L: resid 804-926  (123 residues)  NGLY804 ... CCYS926
+numbering checks out: HET-s 217-289 per chain, 926 residues expected 926
+
+  chain A core atoms: 37
+  chain B core atoms: 37
+  chain C core atoms: 37
+  chain D core atoms: 37
+  chain E core atoms: 37
+  chain F core atoms: 37
+  chain G core atoms: 37
+  chain H core atoms: 37
+  chain I core atoms: 37
+  chain J core atoms: 37
+  chain K core atoms: 37
+  chain L core atoms: 37
+
+[1] simulation energetics -- skipped (no .edr given)
+
+[2] interior fibril stability (core CA RMSD against frame 0)
+    selection: 148 core CA (4 chains x 37), chains FGHI
+    each frame is least-squares superposed on frame 0 of the trajectory, then
+    the RMSD of those atoms from their frame-0 positions is taken: this asks
+    whether the core still has the shape it started with, not where it sits.
+    start 0.00 A, end 1.55 A, mean over the last 50% 1.50 A, scatter about the fit 0.09 A
+    drift across the window -0.188 A = 2.14 sigma, slope -0.005 A/ns = 6.6 x its error  ->  NOT settled
+
+[3] axial spans: core-COM distance of every consecutive pair
+
+    pair       mean/A    sd/A   drift/A   sigma  slope A/ns  settled
+    ------------------------------------------------------------
+    A-B          9.65   0.094    +0.127    1.45      +0.003  NOT settled
+    B-C          9.59   0.061    +0.023    0.38      +0.001  settled
+    C-D          9.47   0.063    +0.049    0.80      +0.001  settled
+    D-E          9.44   0.065    +0.056    0.88      +0.001  settled
+    E-F         10.30   0.088    +0.013    0.15      +0.000  settled
+    F-G         10.38   0.135    +0.066    0.50      +0.002  settled
+    G-H          9.88   0.109    -0.215    2.40      -0.006  NOT settled
+    H-I          9.53   0.062    -0.052    0.85      -0.001  settled
+    I-J          9.51   0.057    +0.014    0.25      +0.000  settled
+    J-K          9.65   0.062    -0.024    0.39      -0.001  settled
+    K-L         10.89   0.247    +0.659    4.21      +0.017  NOT settled
+
+    interior band (E-F, F-G, G-H, H-I, I-J): 9.92 +/- 0.38 A
+    other free end (A-B):  9.65 +/- 0.09 A
+    cap junction  (K-L):  10.89 +/- 0.16 A
+
+    cap vs interior band: +0.97 A = 2.6 sigma
+    cap vs other free end: +1.24 A = 6.9 sigma
+
+    The cap junction is itself a free end, so the fair comparison is
+    K-L against A-B, not against the interior:
+    an end monomer has a neighbour on one side only and sits wider.
+
+    verdict
+    ------------------------------------------------------------
+      [FAIL]  K-L span has settled  (mean 10.89 A)
+      [FAIL]  K-L behaves like A-B (< 2 sigma)  (6.9 sigma)
+      [PASS]  K-L below the H-bond ceiling (11.42 A)  (10.89 A = band 9.92 +0.97)
+      [PASS]  A-B below it too, so it is a sound reference  (9.65 A)
+      [FAIL]  interior RMSD has settled  (1.50 A)
+      [FAIL]  every interior pair has settled  (G-H)
+
+    wrote stability.png
+
+[4] cap interface quality -- run separately. Two references, not one: an interior
+    interface is the most an interface can be, and A-B is the matched one, because
+    A is a terminal monomer like the cap and frays as a terminal monomer does.
+    Avoid any interface touching a restrained chain.
+
+    The cap lost residues 1-7, so each HET-s partner is cut to HET-s 224-289 to
+    give all three pairs the same 66 residues per side:
+
+    gmx_mpi make_ndx -f prod.tpr -o chains.ndx
+        splitch 1
+        name <2nd new group>  chain_B
+        name <8th new group>  chain_H
+        name <11th new group> chain_K
+        <1st new group>  & r 224-289    -> name it A_rungs
+        <9th new group>  & r 224-289    -> name it I_rungs
+        <12th new group> & r 8-73       -> name it L_rungs
+        q
+
+    gmx_mpi hbond -s prod.tpr -f nojump_prot.xtc -n chains.ndx -r 'group "chain_K"' -t 'group "L_rungs"' -num hb_KL.xvg
+    gmx_mpi hbond -s prod.tpr -f nojump_prot.xtc -n chains.ndx -r 'group "chain_H"' -t 'group "I_rungs"' -num hb_HI.xvg
+    gmx_mpi hbond -s prod.tpr -f nojump_prot.xtc -n chains.ndx -r 'group "chain_B"' -t 'group "A_rungs"' -num hb_AB.xvg
+
+A K-L count at or above A-B means the cap has formed a real stacked interface;
+near H-I means a fully templated one. Much below A-B means it sits at the right
+distance without stacking -- which checks 2 and 3 cannot tell apart. Give -r and
+-t different groups: the same group twice counts a chain's own internal hydrogen
+bonds, a much larger and unrelated number.
+

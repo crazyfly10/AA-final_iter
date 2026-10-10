@@ -1,0 +1,12 @@
+source leaprc.protein.ff19SB
+source leaprc.gaff2
+source leaprc.water.opc
+loadAmberPrep CYL.prepin
+loadAmberParams frcmod.CYL
+loadAmberParams frcmod.ff19SB_CYL
+p = sequence { ACE ALA CYL ALA NME }
+check p
+saveAmberParm p test_CYL.parm7 test_CYL.rst7
+q = sequence { ACE ALA CYX ALA NME }
+saveAmberParm q test_CYX.parm7 test_CYX.rst7
+quit

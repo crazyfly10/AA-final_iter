@@ -1,0 +1,26 @@
+# This file was created Fri Oct  2 08:52:22 2026
+# Created by:
+#                :-) GROMACS - gmx energy, 2026.3-conda_forge (-:
+# 
+# Executable:   /root/miniconda3/envs/GROMACS-IGEM/bin.AVX2_256/gmx_mpi
+# Data prefix:  /root/miniconda3/envs/GROMACS-IGEM
+# Working dir:  /root/bonded_inter_cap_#2/process_long_linker_retry/ace_cyl_nme.amb2gmx
+# Command line:
+#   gmx_mpi energy -f em.edr -o em.xvg
+# gmx energy is part of G R O M A C S:
+#
+# Gromacs Runs One Microsecond At Cannonball Speeds
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(kJ/mol)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Potential"
+    0.000000  696816868492574720.000000
+    1.000000  696813501238214656.000000

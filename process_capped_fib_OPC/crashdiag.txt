@@ -1,0 +1,136 @@
+=== still running? ===
+not running
+=== finished normally? ===
+no 'Finished mdrun' line
+=== last step reached ===
+           Step           Time
+        5620000    22480.00000
+=== env var picked up? ===
+prod.log:Setting the maximum number of constraint warnings to 2147483647
+prod.out:Setting the maximum number of constraint warnings to 2147483647
+=== LINCS warnings ===
+0
+=== errors ===
+prod.log:61:GPU support:         CUDA
+prod.log:81:CUDA compiler:       /root/miniconda3/envs/GROMACS-IGEM/bin/nvcc (NVIDIA 12.9.86)
+prod.log:82:CUDA compiler flags:  -O3 -DNDEBUG -use_fast_math -static-global-template-stub=false -Xptxas=-warn-double-usage -Xptxas=-Werror -diag-suppress=177 -use_fast_math -static-global-template-stub=false -Xptxas=-warn-double-usage -Xptxas=-Werror -diag-suppress=177 -O3 -DNDEBUG
+prod.log:83:CUDA targets:        50;52-real;60-real;61-real;70-real;75-real;80-real;86-real;89-real;90-real;120
+prod.log:84:CUDA driver:         13.20
+prod.log:85:CUDA runtime:        12.90
+=== prod.out, last 60 ===
+nohup: ignoring input
+                :-) GROMACS - gmx mdrun, 2026.3-conda_forge (-:
+
+Executable:   /root/miniconda3/envs/GROMACS-IGEM/bin.AVX2_256/gmx_mpi
+Data prefix:  /root/miniconda3/envs/GROMACS-IGEM
+Working dir:  /root/bonded_inter_cap_#2/process_capped_fib_OPC
+Command line:
+  gmx_mpi mdrun -deffnm prod -nb gpu -pme gpu
+
+
+Back Off! I just backed up prod.log to ./#prod.log.1#
+Compiled SIMD is AVX2_256, but AVX_512 might be faster (see log).
+The current CPU can measure timings more accurately than the code in
+gmx mdrun was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding gmx mdrun with the GMX_USE_RDTSCP=ON CMake option.
+Reading file prod.tpr, VERSION 2026.3-conda_forge (single precision)
+
+GPU-aware MPI was not detected, will not use direct GPU communication. Check the GROMACS install guide for recommendations for GPU-aware support. If you are certain about GPU-aware support in your MPI library, you can force its use by setting the GMX_FORCE_GPU_AWARE_MPI environment variable.
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do non-perturbed short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the CPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI process
+Using 23 OpenMP threads 
+
+
+NOTE: OS CPU limit is lower than logical cpu count, thread pinning disabled.
+Setting the maximum number of constraint warnings to 2147483647
+
+Back Off! I just backed up prod.xtc to ./#prod.xtc.1#
+
+Back Off! I just backed up prod.edr to ./#prod.edr.1#
+starting mdrun 'Protein in water'
+50000000 steps, 200000.0 ps.
+
+step 5620352: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+=== prod.log, last 60 ===
+    1.14320e+04    2.85662e+04    1.77730e+04    1.77307e+03    2.51526e+03
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+    1.20704e+04    1.21607e+05    2.43334e+05   -2.23726e+04   -2.40036e+06
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    1.15812e+04   -1.97208e+06    2.95457e+05   -1.67662e+06    5.05288e+06
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    2.97996e+02   -3.26945e+02    4.80699e+01    2.56098e-05
+
+           Step           Time
+        5612500    22450.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Per. Imp. Dih.      CMAP Dih.
+    1.13188e+04    2.84731e+04    1.78478e+04    1.75241e+03    2.57729e+03
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+    1.22070e+04    1.21624e+05    2.44304e+05   -2.23638e+04   -2.40201e+06
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    1.13291e+04   -1.97294e+06    2.96541e+05   -1.67640e+06    5.05576e+06
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    2.99090e+02   -3.26690e+02    1.29904e+02    2.71896e-05
+
+           Step           Time
+        5615000    22460.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Per. Imp. Dih.      CMAP Dih.
+    1.14456e+04    2.87452e+04    1.77604e+04    1.76846e+03    2.62244e+03
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+    1.22130e+04    1.21292e+05    2.42821e+05   -2.23304e+04   -2.39814e+06
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    1.14460e+04   -1.97036e+06    2.95711e+05   -1.67465e+06    5.05797e+06
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    2.98252e+02   -3.25714e+02    3.10747e+01    2.92917e-05
+
+           Step           Time
+        5617500    22470.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Per. Imp. Dih.      CMAP Dih.
+    1.12540e+04    2.90993e+04    1.77260e+04    1.72927e+03    2.54682e+03
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+    1.20270e+04    1.21435e+05    2.43615e+05   -2.23108e+04   -2.39863e+06
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    1.14706e+04   -1.97004e+06    2.95467e+05   -1.67457e+06    5.06179e+06
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    2.98006e+02   -3.25145e+02   -1.30838e+01    3.67477e-05
+
+           Step           Time
+        5620000    22480.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Per. Imp. Dih.      CMAP Dih.
+    1.14286e+04    2.84065e+04    1.78896e+04    1.70352e+03    2.57050e+03
+          LJ-14     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)
+    1.21977e+04    1.22210e+05    2.40753e+05   -2.24248e+04   -2.39617e+06
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    1.14731e+04   -1.96996e+06    2.97884e+05   -1.67208e+06    5.06584e+06
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    3.00444e+02   -3.28473e+02    8.37132e+01    2.99560e-05
+
+=== tpr settings ===
+=== files ===
+-rw-r--r-- 1 root root 3.5M 2026-10-07_10:45:33 prod.cpt
+-rw-r--r-- 1 root root 1.5M 2026-10-07_10:47:00 prod.edr
+-rw-r--r-- 1 root root 1.5M 2026-10-07_10:47:00 prod.log
+-rw-r--r-- 1 root root 1.7K 2026-10-07_09:31:02 prod.mdp
+-rw-r--r-- 1 root root 1.9K 2026-10-07_10:47:00 prod.out
+-rw-r--r-- 1 root root 6.9M 2026-10-07_09:44:35 prod.tpr
+-rw-r--r-- 1 root root 1.2G 2026-10-07_10:47:00 prod.xtc
+=== disk ===
+Filesystem      Size  Used Avail Use% Mounted on
+overlay         3.6T  1.7T  1.8T  49% /
+=== kernel kills ===

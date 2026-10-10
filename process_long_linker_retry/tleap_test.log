@@ -1,0 +1,96 @@
+-I: Adding /root/miniconda3/envs/GROMACS-IGEM/dat/leap/prep to search path.
+-I: Adding /root/miniconda3/envs/GROMACS-IGEM/dat/leap/lib to search path.
+-I: Adding /root/miniconda3/envs/GROMACS-IGEM/dat/leap/parm to search path.
+-I: Adding /root/miniconda3/envs/GROMACS-IGEM/dat/leap/cmd to search path.
+-f: Source tleap_test.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./tleap_test.in
+----- Source: /root/miniconda3/envs/GROMACS-IGEM/dat/leap/cmd/leaprc.protein.ff19SB
+----- Source of /root/miniconda3/envs/GROMACS-IGEM/dat/leap/cmd/leaprc.protein.ff19SB done
+Log file: ./leap.log
+Loading parameters: /root/miniconda3/envs/GROMACS-IGEM/dat/leap/parm/parm19.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA + ff19SB
+Loading parameters: /root/miniconda3/envs/GROMACS-IGEM/dat/leap/parm/frcmod.ff19SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff19SB AA-specific backbone CMAPs for protein 07/25/2019
+Loading library: /root/miniconda3/envs/GROMACS-IGEM/dat/leap/lib/amino19.lib
+Loading library: /root/miniconda3/envs/GROMACS-IGEM/dat/leap/lib/aminoct12.lib
+Loading library: /root/miniconda3/envs/GROMACS-IGEM/dat/leap/lib/aminont12.lib
+----- Source: /root/miniconda3/envs/GROMACS-IGEM/dat/leap/cmd/leaprc.gaff2
+----- Source of /root/miniconda3/envs/GROMACS-IGEM/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /root/miniconda3/envs/GROMACS-IGEM/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+----- Source: /root/miniconda3/envs/GROMACS-IGEM/dat/leap/cmd/leaprc.water.opc
+----- Source of /root/miniconda3/envs/GROMACS-IGEM/dat/leap/cmd/leaprc.water.opc done
+Loading library: /root/miniconda3/envs/GROMACS-IGEM/dat/leap/lib/atomic_ions.lib
+Loading library: /root/miniconda3/envs/GROMACS-IGEM/dat/leap/lib/solvents.lib
+Loading parameters: /root/miniconda3/envs/GROMACS-IGEM/dat/leap/parm/frcmod.opc
+Reading force field modification type file (frcmod)
+Reading title:
+Parameters for OPC water (JPCL, 2014, 5 (21), pp 3863-3871)
+Loading parameters: /root/miniconda3/envs/GROMACS-IGEM/dat/leap/parm/frcmod.ionslm_126_opc
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of atomic ions for the OPC water model (12-6 set)
+Loading Prep file: ./CYL.prepin
+Loading parameters: ./frcmod.CYL
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Loading parameters: ./frcmod.ff19SB_CYL
+Reading force field modification type file (frcmod)
+Reading title:
+DIHE
+Checking 'p'....
+Checking parameters for unit 'p'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <CYL 3>:  -M   H    N    CA  
+ <CYL 3>:  C5   N1   C6   O1  
+ <CYL 3>:  C6   C46  N1   C7  
+ <CYL 3>:  C8   N2   C9   O2  
+ <CYL 3>:  C9   C10  N2   H14 
+ <CYL 3>:  C35  C36  N3   H67 
+ <CYL 3>:  C37  N3   C36  O15 
+ <CYL 3>:  C43  C44  N4   H80 
+ <CYL 3>:  N4   N5   C44  O16 
+ <CYL 3>:  C4   N1   C46  O17 
+ <CYL 3>:  +M   O    C    CA  
+ total 18 improper torsions applied
+ 11 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 8 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
