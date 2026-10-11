@@ -1,0 +1,57 @@
+fibril: 6914 heavy atoms; 2 attached linkers: CYL23 (54 PEG+biotin atoms), CYL926 (54 PEG+biotin atoms)
+20001 frames, 0-200 ns, one every 10 ps
+
+CYL23: 18.1 PEG+biotin atoms on the fibril on average; lying on it 78% of the time, biotin on it 75%; 5 lie-down/lift-off events
+     block/ns    Rg/A  reach/A     on  biotin on
+      0-20       8.35    17.69    1.9        18%
+     20-40       9.19    19.90    0.6         2%
+     40-60       7.89    13.31   16.0        91%
+     60-80      10.34    26.76   10.7        43%
+     80-100      9.65    18.34   14.4        91%
+    100-120     10.16    18.66   20.0       100%
+    120-140      9.86    18.75   22.7       100%
+    140-160     10.19    19.57   28.3       100%
+    160-180     10.35    19.38   33.9       100%
+    180-200     10.56    20.43   32.3       100%
+
+CYL926: 16.8 PEG+biotin atoms on the fibril on average; lying on it 78% of the time, biotin on it 63%; 5 lie-down/lift-off events
+     block/ns    Rg/A  reach/A     on  biotin on
+      0-20       9.50    21.23    0.1         0%
+     20-40       7.79    14.05    9.7        31%
+     40-60       8.35    16.15    9.2        28%
+     60-80       9.78    23.83   10.0        46%
+     80-100      8.01    13.76   11.1        71%
+    100-120      8.27    14.55   19.1        98%
+    120-140      7.60    15.21   19.0        54%
+    140-160      8.31    19.66   21.7        98%
+    160-180      8.01    20.59   32.6       100%
+    180-200      8.28    21.20   35.3       100%
+
+earliest start keeping at least 90% of the most independent samples, per descriptor
+   descriptor       start/ns  corr. time/ns  independent samples
+   CYL23 Rg               55           3.38                   43
+   CYL23 reach            80           2.48                   48
+   CYL23 on               90          19.48                    6
+   CYL926 Rg               0           6.72                   30
+   CYL926 reach            0           8.43                   24
+   CYL926 on               5          43.62                    4
+
+latest of these: 90 ns -> keep 110 ns
+
+first half vs second half of the kept stretch (difference in standard errors; under 3 = agree)
+   descriptor        1st half  2nd half  difference  independent samples
+   CYL23 Rg              9.96     10.38         2.6                   11
+   CYL23 reach          18.77     19.78         2.6                   11
+   CYL23 on             21.76     31.95         4.9                    6   DIFFER
+   CYL926 Rg             7.88      8.32         1.4                   18
+   CYL926 reach         15.22     21.06         2.9                   11
+   CYL926 on            17.62     30.96         3.8                    5   DIFFER
+
+the halves still differ after 90 ns: the linker conformations have not settled, or switch too rarely for this run to average over
+
+adsorption: biotin on the fibril for good from / contact count within 10% of its last-20-ns value from
+   CYL23    biotin from 72 ns            contacts level off from not by the end
+   CYL926   biotin from 140 ns           contacts level off from 171 ns
+
+wrote linked_eq.csv (20001 frames, 9 columns)
+wrote linked_eq.png
