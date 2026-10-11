@@ -493,7 +493,7 @@ if len(rmsd) != len(times):
           "so rmsd_A is blank in the file")
 
 SURFACE, INK, INK2, MUTED, GRID = "#fcfcfb", "#1a1a19", "#52514e", "#8a8984", "#e8e7e3"
-CAP_C, END_C, BAND_C = "#eb6834", "#2a78d6", "#9a9a94"
+CAP_C, END_C, BAND_C, CORE_C = "#eb6834", "#2a78d6", "#9a9a94", "#1baf7a"
 cap_nm, end_nm = pair_names[CAP_PAIR], pair_names[FREE_END_PAIR]
 
 plt.rcParams.update({"font.size": 11, "axes.edgecolor": MUTED, "axes.labelcolor": INK2,
@@ -523,20 +523,21 @@ y -= line_h * 0.3
 for line in textwrap.wrap(sub, width=max(28, int(avail_in / 0.0920))):
     fig.text(LEFT, y, line, fontsize=10, color=INK2, va="top")
     y -= line_h
-handles = [plt.Line2D([], [], color=CAP_C, lw=2.4, label=f"cap junction  {cap_nm}"),
-           plt.Line2D([], [], color=END_C, lw=2.4,
-                      label=f"the fibril's other free end  {end_nm}"),
-           plt.Line2D([], [], color=BAND_C, lw=1.2,
-                      label=f"the other {len(pair_names) - 2} junctions")]
+key = [(CORE_C, 2.0, "the fibril core, chains "
+        + ", ".join(CHAIN_NAMES[i] for i in rmsd_chains) + "   (panel A)", True),
+       (CAP_C, 2.4, f"cap junction  {cap_nm}   (panels B and C)", True),
+       (END_C, 2.4, f"the fibril's other free end  {end_nm}", True),
+       (BAND_C, 1.2, f"the other {len(pair_names) - 2} junctions", False)]
+handles = [plt.Line2D([], [], color=c, lw=lw, label=lab) for c, lw, lab, _ in key]
 y -= line_h * 0.5
 leg = fig.legend(handles=handles, loc="upper left", frameon=False, fontsize=10,
-                 ncol=3 if wide else 1, handlelength=1.8, handletextpad=0.7,
-                 columnspacing=2.4, borderaxespad=0, bbox_to_anchor=(LEFT, y))
-for t, (c, bold) in zip(leg.get_texts(), ((CAP_C, 1), (END_C, 1), (INK2, 0))):
-    t.set_color(c)
+                 ncol=2 if wide else 1, handlelength=1.8, handletextpad=0.7,
+                 columnspacing=3.0, borderaxespad=0, bbox_to_anchor=(LEFT, y))
+for t, (c, _, _, bold) in zip(leg.get_texts(), key):
+    t.set_color(c if bold else INK2)
     if bold:
         t.set_fontweight("bold")
-y -= line_h * (3.5 if wide else 5.6)
+y -= line_h * (4.6 if wide else 7.0)
 
 gs = fig.add_gridspec(2, 1, height_ratios=[1.0, 1.3], hspace=0.42,
                       left=LEFT, right=RIGHT, top=y, bottom=0.115 if wide else 0.135)
@@ -556,9 +557,9 @@ for ax in [axA] + [a for pair in lower for a in pair]:
         ax.spines[side].set_visible(False)
 
 # ---- A: interior RMSD
-axA.set_title("A   Shape of the fibril core", loc="left", fontsize=12,
+axA.set_title("A   Has the fibril core stopped changing shape?", loc="left", fontsize=12,
               fontweight="bold", color=INK, pad=10)
-axA.plot(t_rmsd / 1000, rmsd, lw=1.2, color=BAND_C)
+axA.plot(t_rmsd / 1000, rmsd, lw=1.6, color=CORE_C)
 axA.axvline(t_rmsd[cut_r] / 1000, color=MUTED, lw=0.9, ls=(0, (4, 3)))
 axA.text(t_rmsd[cut_r] / 1000 + 0.012 * t_rmsd[-1] / 1000, axA.get_ylim()[1],
          "averages taken over this part", fontsize=9.5, color=MUTED, va="top")
